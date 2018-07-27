@@ -1,0 +1,11 @@
+{
+    "beer":[
+        {
+            "id": 1,
+            "name": "",
+            "tagline": "",
+            "first_brewed": "",
+            "description": ""
+        }
+    ]
+}
