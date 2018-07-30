@@ -1,12 +1,12 @@
 {
-  "name": "awesomeapp",
+  "name": "BrewDog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jisie David",
+  "author": "Joey Smith",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^1.0.3",
