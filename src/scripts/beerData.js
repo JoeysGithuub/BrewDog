@@ -18,13 +18,13 @@ $.getJSON( "https://api.punkapi.com/v2/beers", function (data) {
             item =>
          ` <div class = "beer-wrapper">
         <div class = "beer ${percent}">
-          <i class="fa fa-star" aria-hidden="true"></i>
+         <i class="fa fa-star" aria-hidden="true"></i>
           <h3 class="beer__name">${item.name}</h3>
           <img class ="beer__img" src = "${item.image_url}">
           <h4 class ="beer__tagline">${item.tagline}</h4>
          </div>
          <div class ="pop-up">
-          <i class="fa fa-window-close-o" aria-hidden="true"></i>
+         <i class="fa fa-window-close-o" aria-hidden="true"></i>
             <h3 class ="title">Description</h3>
             <p>${item.description}</p>
             <h3 class ="title">Food Pairing</h3>

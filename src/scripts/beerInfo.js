@@ -1,7 +1,7 @@
 const $ = require("jquery")
     
     // beer pop up - extra info from data
-    $(".beer img").on("click", function () {
+    $(".beer__img").on("click", function () {
         $(this)
             .closest(".beer-wrapper")
             .find(".pop-up")
