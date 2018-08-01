@@ -2,11 +2,22 @@ const $ = require("jquery")
 
 const loginData = Object.create({}, {
     postUser: {
-        value: (newUserObject) => {
+        value: (newUser) => {
             return $.ajax({
                 url: "http://localhost:3000/users",
                 method: "POST",
-                data: newUserObject
+                data: {
+                    name: newUser.name,
+                    password: newUser.password
+                }
+            })
+        }
+    },
+    getAllUsers: {
+        value: () => {
+            return $.ajax({
+                url: "http://localhost:3000/users",
+                method: "GET"
             })
         }
     }

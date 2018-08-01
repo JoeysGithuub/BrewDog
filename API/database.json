@@ -1,0 +1,39 @@
+{
+  "beers": [
+    {
+      "id": 1,
+      "name": "",
+      "tagline": "",
+      "first-brewed": "",
+      "description": "",
+      "image_url": ""
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "",
+      "password": ""
+    },
+    {
+      "name": "",
+      "id": 2
+    },
+    {
+      "name": "dj",
+      "id": 3
+    },
+    {
+      "name": "scj",
+      "id": 4
+    },
+    {
+      "name": "Joey",
+      "id": 5
+    },
+    {
+      "name": "d",
+      "id": 6
+    }
+  ]
+}

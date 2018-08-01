@@ -1,14 +1,15 @@
 const $ = require("jquery")
 
-const signUpForm = Object.create({}, {
-    buildForm: {
+const loginInfo = Object.create({}, {
+    buildLoginInfo: {
         value: () => {
-            const $signDiv = $("<div>").attr("id", "sign")
-            $("<input>").attr("id", "logIn-input").attr("placeholder", "Username").appendTo($signDiv)
-            $("<button>").attr("id", "logIn-butt").text("Sign In").appendTo($signDiv)
-            $signDiv.appendTo($("#signBox"))
+            const $formDiv = $("<div>").attr("id", "form")
+            $("<input>").attr("id", "userName-input").attr("placeholder", "username").appendTo($formDiv)
+            $("<input>").attr("id", "password-input").attr("placeholder", "password").appendTo($formDiv)
+            $("<button>").attr("id", "add-btt").text("Sign In").appendTo($formDiv)
+            $formDiv.appendTo($("#signBox"))
         }
     }
 })
 
-module.exports = signUpForm
+module.exports = loginInfo

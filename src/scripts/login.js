@@ -1,3 +1,4 @@
 const formBuilder = require("./loginBuilder")
 
-formBuilder.buildForm()
+formBuilder.buildLoginInfo()
+ 

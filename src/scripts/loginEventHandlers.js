@@ -3,10 +3,18 @@ const loginData = require("./loginHandler")
 
 let userID = ""
 
-$("#signBox").on("click", "#logIn-butt", () => {
-    const loginInput = $("#logIn-input").val()
+$("#signBox").on("click", "#add-btt", () => {
+    const userNameInput = $("#userName-input").val()
     const newUser = {
-        name: loginInput
+        name: userNameInput
     } 
     console.log(loginData)
+
+    loginData.postUser(newUser)
+        .then((userInfo) => {
+            console.log(userInfo)
+            $("#logIn-input").val("").attr("placeholder", "Username")
+            return loginData.getAllUsers()
+
+    })
 })
