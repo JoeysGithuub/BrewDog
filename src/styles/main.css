@@ -35,7 +35,7 @@ body {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 2%;
-  background: white;
+  background: white;  
   text-align: center;
   padding: 2%;
   margin-bottom: 18px;
@@ -50,8 +50,9 @@ body {
   position: relative;
 }
 .active {
-  background: #00afdb;
+  background: purple;
   color: green;
+  border-radius: 20%;
 }
 .pop-up {
   display: none;

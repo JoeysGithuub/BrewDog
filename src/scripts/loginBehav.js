@@ -6,13 +6,13 @@ $(document).ready(function(){
      // Check the checkbox state
      if($(this).is(':checked')){
       // Changing type attribute
-      $("#password").attr("type","text");
+      $("#password-input").attr("type","text");
       
       // Change the Text
       $("#toggleText").text("Hide");
      }else{
       // Changing type attribute
-      $("#password").attr("type","password");
+      $("#password-input").attr("type","password");
      
       // Change the Text
       $("#toggleText").text("Show");

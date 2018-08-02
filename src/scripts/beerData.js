@@ -1,12 +1,12 @@
 const $ = require("jquery")
 
 $.getJSON("https://api.punkapi.com/v2/beers", function(data) {  
-  console.log(data);
+  // console.log(data);
 
   // filter through data 
   let weakBeers = data.filter(beer => beer.abv <= 4.5);
   let medBeers = data.filter(beer => beer.abv > 4.5 && beer.abv <= 7.5);
-  let strongBeers = data.filter(beer => beer.abv > 7.5 && beer.abv <= 100);
+  let strongBeers = data.filter(beer => beer.abv > 7.5 && beer.abv <= 99);
   // pass in filtered data  and class
   function Display(range, percent) {
     // build html with filted data

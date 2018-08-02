@@ -8,6 +8,7 @@ const loginData = Object.create({}, {
                 method: "POST",
                 data: {
                     name: newUser.name,
+                    userName: newUser.userName,
                     password: newUser.password
                 }
             })
