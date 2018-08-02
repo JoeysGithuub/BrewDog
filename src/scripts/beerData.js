@@ -47,7 +47,7 @@ $.getJSON("https://api.punkapi.com/v2/beers", function(data) {
   Display(strongBeers, "strong");
 
   // get favorite info
-  $(".beer").one("click", ".fa-star", function() {
+  $(".beer").one("click", ".fa fa-star", function() {
     $(this).toggleClass("active-star");
     let favoriteImg = $(this)
       .closest(".beer-wrapper")
@@ -130,4 +130,6 @@ $.getJSON("https://api.punkapi.com/v2/beers", function(data) {
     $(".beers .medium").hide();
   })
 })
-
+$(".tab_item_fav").on("click", function() {
+  
+})

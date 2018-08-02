@@ -1,12 +1,12 @@
-/* *{
+*{
     background-color: purple;
-} */
+}
 
 body {
   font-size: 14px;
 }
  img {
-  max-width: 40%;
+  max-width: 60%;
 }
 .beers {
   display: grid;
@@ -14,17 +14,17 @@ body {
   grid-gap: 18px;
 }
 .beer {
-    background: #f9f9f9;
+    background: purple;
     padding: 7px;
     text-align: center;
     cursor: pointer;
 }
     img {
-      width: 20%;
+      width: 40%;
     }
     .fa-star {
       float: right;
-      color: green;
+      color: yellow;
       cursor: pointer;
       font-size: 18px;
 }
@@ -35,7 +35,7 @@ body {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-gap: 2%;
-  background: white;  
+  background: purple;  
   text-align: center;
   padding: 2%;
   margin-bottom: 18px;
@@ -51,14 +51,14 @@ body {
 }
 .active {
   background: purple;
-  color: green;
+  color: turquoise;
   border-radius: 20%;
 }
 .pop-up {
   display: none;
   position: absolute;
   background: #000;
-  color: green;
+  color: turquoise;
   font-size: 16px;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -109,5 +109,57 @@ body {
 }
 .favorites__close {
   float: right;
+  cursor: pointer;
+}
+
+.beer__name {
+  font-size: 28px;
+  font-style: oblique;
+  font-weight: bold;
+  
+}
+
+.beer__tagline {
+  font-size: 19px;
+}
+
+h3 {
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 77px;
+  margin: 0;
+  width: 0;
+  white-space: nowrap;
+  position: absolute;
+  text-align: left;
+  transform-origin: bottom; 
+  margin-top: 280px;
+  transform: rotate(270deg);
+}
+
+#name-input {
+  background-color: turquoise;
+}
+
+#userName-input {
+  background-color: turquoise;
+}
+
+#password-input {
+  background-color: turquoise;
+}
+
+#but_reg {
+  color: turquoise;
+}
+
+#toggleText {
+  color: turquoise;
+}
+
+.tab_item_fav {
   cursor: pointer;
 }
