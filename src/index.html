@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="styles/main.css">
     <title>BrewDog</title>
     <body>
-      <div id="signBox">
+        <table>
+            <tr>
+             <td>Name : </td>
+             <td><input type='text' id='name' ></td>
+            </tr>
+            <tr>
+             <td>Username : </td>
+             <td><input type='text' id='username' ></td>
+            </tr>
+            <tr>
+             <td>Password : </td>
+             <td><input type='password' id='password' >&nbsp;
+                <input type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span></td>
+            </tr>
+            <tr>
+             <td>&nbsp;</td>
+             <td><input type='button' id='but_reg' value='Sign Up' ></td>
+            </tr>
+           </table>
+      <!-- <div id="signBox"> -->
         <!-- <input type="text" id="userNames" placeholder="username"/>
         <input type="password" id="input" placeholder="password"/> -->
       </div>

@@ -128,5 +128,6 @@ $.getJSON("https://api.punkapi.com/v2/beers", function(data) {
 
     $(".beers .weak").hide();
     $(".beers .medium").hide();
-  });
-});
+  })
+})
+
