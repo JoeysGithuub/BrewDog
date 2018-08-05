@@ -1,48 +1,49 @@
-*{
-    background-color: purple;
-}
 
-body {
-  font-size: 14px;
+*{
+  background-color: darkolivegreen;
 }
- img {
-  max-width: 60%;
+img {
+  max-width: 100%;
 }
 .beers {
   display: grid;
   grid-template-columns: 32% 32% 32%;
   grid-gap: 18px;
 }
-.beer {
-    background: purple;
+  .beer {
+    background: #f9f9f9;
     padding: 7px;
     text-align: center;
     cursor: pointer;
-}
+  }
     img {
-      width: 40%;
+      width: 20%;
     }
     .fa-star {
       float: right;
-      color: yellow;
+      color: #d6d6d6;
       cursor: pointer;
       font-size: 18px;
 }
 .active-star {
-  color: #00afdb;
+  color: green;
 }
 .tabs {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: 2%;
-  background: purple;  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* grid-template-columns: 35% 35% 35%;
+  grid-template-rows: auto auto auto;
+  grid-gap: 4%; */
+  background: #000;
   text-align: center;
-  padding: 2%;
+  padding: 6%;
   margin-bottom: 18px;
-  border-radius: 25%;
 }
 .tab__item {
+  background: white;
   cursor: pointer;
+  color: green;
 }
 .container {
   max-width: 900px;
@@ -50,15 +51,14 @@ body {
   position: relative;
 }
 .active {
-  background: purple;
-  color: turquoise;
-  border-radius: 20%;
+  background: green;
+  color: #fff;
 }
 .pop-up {
   display: none;
   position: absolute;
   background: #000;
-  color: turquoise;
+  color: #fff;
   font-size: 16px;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -79,26 +79,26 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #00afdbd4;
+  background: teal;
   display: none;
 }
 .title {
-  color: #00afdb; 
+  color: green;
 }
 .favorites {
   display: none;
-  background: #00afdb;
+  background: green;
   position: absolute;
   width: 100%;
 }
   img {
     width: 20%;
-}
+  }
 .favorites__title {
-  background: #00afdb;
+  background: green;
   display: inline-block;
   padding: 5px;
-  color: green;
+  color: #fff;
   margin: 0;
   cursor: pointer;
 }
@@ -112,16 +112,6 @@ body {
   cursor: pointer;
 }
 
-.beer__name {
-  font-size: 28px;
-  font-style: oblique;
-  font-weight: bold;
-  
-}
-
-.beer__tagline {
-  font-size: 19px;
-}
 
 h3 {
   font-size: 23px;
