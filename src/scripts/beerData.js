@@ -1,28 +1,29 @@
 const $ = require("jquery")
+const beerFavData = require("./beerFavData.js")
 
 $.getJSON("https://api.punkapi.com/v2/beers", function(data) {
-  console.log(data);
+  console.log(data)
 
   //filter through data 
-  let weakBeers = data.filter(beer => beer.abv <= 4.5);
-  let medBeers = data.filter(beer => beer.abv > 4.5 && beer.abv <= 7.5);
-  let strongBeers = data.filter(beer => beer.abv > 7.5 && beer.abv <= 50);
+  let weakBeers = data.filter(beer => beer.abv <= 4.5)
+  let medBeers = data.filter(beer => beer.abv > 4.5 && beer.abv <= 7.5)
+  let strongBeers = data.filter(beer => beer.abv > 7.5 && beer.abv <= 50)
   //pass in data and a class
   function Display(range, percent) {
     //build html
     let beerHtml = range.map(
       item =>
         `
-        <div class = "beer-wrapper">
-        <div class = "beer ${percent}">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <h3 class="beer__name">${item.name}</h3>
+        <div class ="beer-wrapper">
+        <div class ="beer ${percent}">
+          <h3 class ="beer__name">${item.name}</h3>
           <img class ="beer__img" src = "${item.image_url}">
           <h4 class ="beer__tagline">${item.tagline}</h4>
+          <button class ="favBu"></button>
+          
          
          </div>
          <div class ="pop-up">
-          <i class="fa fa-window-close-o" aria-hidden="true"></i>
             <h3 class ="title">Wanna Know More?</h3>
             <p>${item.description}</p>
             <h3 class ="title">Goes Well With</h3>
@@ -34,64 +35,96 @@ $.getJSON("https://api.punkapi.com/v2/beers", function(data) {
 
               </ul>
           </div>
+          <div class ="favBox">
+          <h3 class ="favTitle">Favorites</h3>
+          </div>
         </div>
        
             `
     );
 
-    $(".beers").append(beerHtml);
+    $(".beers").append(beerHtml)
   }
   //call html with class names
-  Display(weakBeers, "weak");
-  Display(medBeers, "medium");
-  Display(strongBeers, "strong");
+  Display(weakBeers, "weak")
+  Display(medBeers, "medium")
+  Display(strongBeers, "strong")
 
   //beer pop up 
   $(".beer img").on("click", function() {
     $(this)
       .closest(".beer-wrapper")
       .find(".pop-up")
-      .fadeIn();
-    $(".bg").fadeIn();
-  });
+      .fadeIn()
+      // .fadeOut()
 
-  $(".fa-window-close-o").on("click", function() {
-    $(".pop-up").fadeOut();
-    $(".bg").fadeOut();
-  });
+    // $(".bg").fadeIn()
+    // $(".bg").fadeOut()
+  })
+
   //hide beers besides medium range
 
-  $(".beer").css("display", "none");
+  $(".beer").css("display", "none")
 
-  $(".beers .medium").css("display", "block");
+  $(".beers .medium").css("display", "block")
 //filter beers using tabs
   $(".tab__item").on("click", function() {
-    $(".tab__item").removeClass("active");
-    $(this).addClass("active");
-  });
+    $(".tab__item").removeClass("active")
+    $(this).addClass("active")
+  })
 
+  
+$(".favBu").on("click", function() {
+  $(this)
+  // console.log("hello")
+  .closest(".beer-wrapper")
+  .find(".favBox")
+  .fadeIn()
+  .fadeOut(5000)
+    // $(".bg").fadeIn()
+    // $(".bg").fadeOut()
+})
+
+
+$(".favBu").on("click", () => {
+  console.log("fuck")
+  const beerName = $(".beer__name").val()
+  const beerImg = $(".beer__img").val()
+  const newFavorite = {
+    name: beerName.name,
+    image: beerImg.image_url
+  }
+    // userID: userData()
+
+  // console.log("thi is the one", userData())
+  beerFavData.postFavorite(newFavorite)
+  .then((favInfo) => {
+    console.log("favInfo",favInfo)
+    return beerFavData.getAllFavorites()
+  })
+})
+//     
   $(".tab__item.weak").on("click", function() {
-    $(".beers .weak").show();
+    $(".beers .weak").show()
 
-    $(".beers .medium").hide();
-    $(".beers .strong").hide();
-  });
+    $(".beers .medium").hide()
+    $(".beers .strong").hide()
+  })
 
   $(".tab__item.medium").on("click", function() {
-    $(".beers .medium").show();
+    $(".beers .medium").show()
 
     $(".beers .weak").hide();
-    $(".beers .strong").hide();
-  });
+    $(".beers .strong").hide()
+  })
 
   $(".tab__item.strong").on("click", function() {
-    $(".beers .strong").show();
+    $(".beers .strong").show()
 
-    $(".beers .weak").hide();
-    $(".beers .medium").hide();
-  });
-});
-
+    $(".beers .weak").hide()
+    $(".beers .medium").hide()
+  })
+})
 
 
 // const $ = require("jquery")

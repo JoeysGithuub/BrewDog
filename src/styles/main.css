@@ -1,6 +1,6 @@
 
 *{
-  background-color: darkolivegreen;
+  background-color: purple;
 }
 img {
   max-width: 100%;
@@ -11,7 +11,7 @@ img {
   grid-gap: 18px;
 }
   .beer {
-    background: #f9f9f9;
+    background: purple;
     padding: 7px;
     text-align: center;
     cursor: pointer;
@@ -26,13 +26,13 @@ img {
   /* grid-template-columns: 35% 35% 35%;
   grid-template-rows: auto auto auto;
   grid-gap: 4%; */
-  background: #000;
+  background: purple;
   text-align: center;
   padding: 6%;
   margin-bottom: 18px;
 }
 .tab__item {
-  background: white;
+  background: purple;
   cursor: pointer;
   color: green;
 }
@@ -42,14 +42,14 @@ img {
   position: relative;
 }
 .active {
-  background: green;
-  color: #fff;
+  background: purple;
+  color: greenyellow;
 }
 .pop-up {
   display: none;
   position: absolute;
-  background: #000;
-  color: #fff;
+  background: green;
+  color: darkcyan;
   font-size: 16px;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -57,6 +57,7 @@ img {
   width: 55%;
   top: 100%;
   z-index: 99;
+  font-weight: bold;
 }
 .bg {
   position: fixed;
@@ -68,7 +69,7 @@ img {
   display: none;
 }
 .title {
-  color: green;
+  color: purple;
 }
 .favorites {
   display: none;
@@ -83,9 +84,23 @@ img {
   background: green;
   display: inline-block;
   padding: 5px;
-  color: #fff;
+  color: darkcyan;
   margin: 0;
   cursor: pointer;
+}
+
+.favBox {
+  display: none;
+  position: absolute;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  padding: 3%;
+  width: 55%;
+  top: 100%;
+  z-index: 99;
 }
 
 h3 {
@@ -127,4 +142,9 @@ h1 {
 
 .tab_item_fav {
   cursor: pointer;
+}
+
+.fav {
+  height: 20px;
+  width: 30px;
 }
