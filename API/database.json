@@ -10,5 +10,18 @@
       "userId": ""
     }
   ],
-  "users": []
+  "users": [
+    {
+      "name": "",
+      "userName": "",
+      "password": "",
+      "id": 1
+    },
+    {
+      "name": "Joey Smith",
+      "userName": "joey",
+      "password": "jfdojfe",
+      "id": 2
+    }
+  ]
 }
