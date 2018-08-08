@@ -25,13 +25,13 @@ $(document).on("click", ".addComment", function() {
   console.log(newComment);
   beerFavData.postFavorite(newComment)
 .then((favInfo) => {
-    $(".favComments-input").val("").attr("placeholder", "What Did You Think?")
+    // $(".favComments-input").val("").attr("placeholder", "What Did You Think?")
 
-    return beerFavData.getAllFavorites()
-})
-.then(commentArray => {
-    beerPrint.printComment(commentArray)
-})
+//     return beerFavData.getAllFavorites()
+// })
+// .then(commentArray => {
+//     beerPrint.printComment(commentArray)
+// })
 
 })
 

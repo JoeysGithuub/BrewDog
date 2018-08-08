@@ -1,7 +1,7 @@
 const $ = require("jquery")
 const beerBuild = require("./beerFavBuild")
 const beerFav = require("./beerFav")
-const beerFavData = require("./beerFavData")
+const beerFavData = require("./CommentFavData")
 
 $.getJSON("http://localhost:3000/beers", function (data) {
 
@@ -89,8 +89,6 @@ console.log(data)
     $(".favorites").append(favoriteHTML)
   })
 
-
-
   $(".favorites").append(
     '<i class="fa fa-window-close-o favorites__close" aria-hidden="true"></i>'
   )
@@ -107,20 +105,18 @@ console.log(data)
       const favoriteName = $(".favName").val();
       const favoriteImg = $(".favImg").val();
       const favoriteTagline = $(".favTag").val();
-      const newFavs = {
+      const favId = $(".favBeerId")
+      const newBeers = {
         name: favoriteName,
         image: favoriteImg,
         tagline: favoriteTagline,
-        // userID: userData()
+        id: favId
       }
-       console.log("working up top")
-      beerFavData.post(newFavs)
-      .then((taskInfo) => {
+      beerFavData.postBeer(newBeers)
+    })
+ 
 
-        // console.log("task date", $("#taskCompletion-input"))
-        return beerFavData.getAllTasks()
-      })
-  })
+
 
 
   //beer pop up

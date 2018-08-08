@@ -3293,9 +3293,25 @@
   ],
   "favorites": [
     {
-      "id": "",
-      "user_id": "",
-      "favorites": []
+      "id": "fN6B3Zr"
+    },
+    {
+      "id": "B_vvaoz"
+    },
+    {
+      "id": "E70Hy7f"
+    },
+    {
+      "id": "~6nr58w"
+    },
+    {
+      "id": "LCm4fI5"
+    },
+    {
+      "id": "rUJ33fS"
+    },
+    {
+      "id": "K3n~XfB"
     }
   ],
   "comments": [
@@ -3303,6 +3319,81 @@
       "comment": "better",
       "beerId": "5",
       "id": "B1rSuXM"
+    },
+    {
+      "comment": "joey",
+      "beerId": "5",
+      "id": "mqV9IQz"
+    },
+    {
+      "comment": "",
+      "beerId": "5",
+      "id": "XuXQXPV"
+    },
+    {
+      "comment": "gooder",
+      "beerId": "10",
+      "id": "fT2hftH"
+    },
+    {
+      "comment": "",
+      "beerId": "7",
+      "id": "bqSrz5_"
+    },
+    {
+      "comment": "pretty good",
+      "beerId": "5",
+      "id": "C1_ThKO"
+    },
+    {
+      "comment": "preety",
+      "beerId": "5",
+      "id": "wKX4I~B"
+    },
+    {
+      "comment": "",
+      "beerId": "5",
+      "id": "jWV4TwS"
+    },
+    {
+      "comment": "dl",
+      "beerId": "5",
+      "id": "lKOsygW"
+    },
+    {
+      "comment": "this sucks",
+      "beerId": "5",
+      "id": "8oIgB4l"
+    },
+    {
+      "comment": "fjfj",
+      "beerId": "5",
+      "id": "hZy0PC7"
+    },
+    {
+      "comment": "jj",
+      "beerId": "2",
+      "id": "nU355tc"
+    },
+    {
+      "comment": "ksm",
+      "beerId": "5",
+      "id": "3caU0ID"
+    },
+    {
+      "comment": "s",
+      "beerId": "5",
+      "id": "OkD4ydZ"
+    },
+    {
+      "comment": "kdjd",
+      "beerId": "5",
+      "id": "1R0GfKq"
+    },
+    {
+      "comment": "hh",
+      "beerId": "6",
+      "id": "daTvtmw"
     }
   ]
 }

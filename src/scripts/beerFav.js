@@ -5,7 +5,7 @@ const beerPrint = require("./beerFavPrint")
 
 
 const printOnPageLoad = () => {
-    $.ajax("http://localhost:3000/favorites")
+    $.ajax("http://localhost:3000/comments")
     .then((beer) => {
         beerPrint.printComment(beer)
     })
