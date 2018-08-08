@@ -1,5 +1,14 @@
-// const $ = require("jquery")
+const $ = require("jquery")
 
-// const beerBuild = require("./beerFavBuild")
+const beerBuild = require("./beerFavBuild")
+const beerPrint = require("./beerFavPrint")
 
-// beerBuild.buildEventForm()
+
+const printOnPageLoad = () => {
+    $.ajax("http://localhost:3000/favorites")
+    .then((beer) => {
+        beerPrint.printComment(beer)
+    })
+}
+
+printOnPageLoad()

@@ -1,9 +1,52 @@
 const $ = require("jquery")
 const beerFavData = require("./beerFavData")
 const beerData = require("./beerView")
+const beerPrint = require("./beerFavPrint")
 
-  $(".favorites__item").on("click", ".remove__Favorite", function () {
-    console.log("fuck")
+
+// $(document).on("click", ".addComment", function() {
+//   console.log("add");
+// })
+
+// $(document).on("click", ".removeFavorite", function() {
+//   console.log("delete");
+// })
+
+$(document).on("click", ".addComment", function() {
+  console.log("updates")
+  const commentInput = $(".favComments-input").val();
+  const beerIdInput = $(".favBeerId").val();
+  const newComment = {
+      comment: commentInput,
+      beerId: beerIdInput
+  }
+
+
+  console.log(newComment);
+  beerFavData.postFavorite(newComment)
+.then((favInfo) => {
+    $(".favComments-input").val("").attr("placeholder", "What Did You Think?")
+
+    return beerFavData.getAllFavorites()
+})
+.then(commentArray => {
+    beerPrint.printComment(commentArray)
+})
+
+})
+
+// beerFavData.postFavorite(commentInput)
+// .then((favInfo) => {
+//     $(".favComments-input").val("").attr("placeholder", "What Did You Think?");
+
+//     return beerFavData.getAllFavorites()
+// })
+// .then(commentArray => {
+//     beerPrint.printComment(commentArray)
+// })
+
+
+
 //     const beerImg = $(".beer__img").val();
 //     const newFavorite = {
 //       favorite: beerImg
@@ -20,6 +63,5 @@ const beerData = require("./beerView")
 //       // console.log("task date", $("#taskCompletion-input"))
 //       return beerFavData.getAllFavorites()
 //     })
- })
 // //     .then(taskArray => {
 // //       taskPrinter.printTasks(taskArray)
