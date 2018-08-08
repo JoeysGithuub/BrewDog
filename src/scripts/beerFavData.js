@@ -4,7 +4,7 @@ const favData = Object.create({}, {
     postFavorite: {
         value: (newFavorite) => {
             return $.ajax({
-                url: "https://api.punkapi.com/v2/beers",
+                url: "http://localhost:3000/beers",
                 method: "POST",
                 data: newFavorite
             })
@@ -12,13 +12,13 @@ const favData = Object.create({}, {
     },
     getAllFavorites: {
         value: () => {
-            return $.ajax("https://api.punkapi.com/v2/beers")
+            return $.ajax("http://localhost:3000/beers")
         }
     },
     getFavorite: {
         value: (id) => {
             return $.ajax({
-                url: `https://api.punkapi.com/v2/beers${id}`,
+                url: `http://localhost:3000/beers${id}`,
                 method: "GET"
             })
         }
@@ -26,7 +26,7 @@ const favData = Object.create({}, {
     putFavorite: {
         value: (updateFavorites) => {
             return $.ajax({
-                url: `https://api.punkapi.com/v2/beers/${updateFavorites.id}`,
+                url: `http://localhost:3000/beers${updateFavorites.id}`,
                 method: "PUT",
                 data: {
                 }
@@ -36,7 +36,7 @@ const favData = Object.create({}, {
     deleteFavorite: {
         value: (id) => {
             return $.ajax({
-                url: `https://api.punkapi.com/v2/beers/${id}`,
+                url: `http://localhost:3000/beers${id}`,
                 method: "DELETE",
             })
         }

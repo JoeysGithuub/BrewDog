@@ -1,6 +1,8 @@
 const $ = require("jquery")
+// const beerBuild = require("./beerFavBuild")
+// const beerFav = require("./beerFav")
 
-$.getJSON("https://api.punkapi.com/v2/beers", function (data) {
+$.getJSON("http://localhost:3000/beers", function (data) {
 
 
   //filter data 
@@ -67,19 +69,23 @@ $.getJSON("https://api.punkapi.com/v2/beers", function (data) {
               <h4>${favoriteName}</h4>
               <img src = ${favoriteImg} />
               <h5>${favoriteTagline}</h5>
-              <button id="delete-butt">Delete</button>
-              <button class="edit">Edit</button>
+              <input class="favComments" placeholder="What Did You Think?"></input>
+              <button type="button" class = "add__Comment">Post</button>
+              <button class ="remove__Favorite">Delete</button>
+              <button type="button" class="update">Edit</button>
             </div>
       `;
 
     $(".favorites").append(favoriteHTML)
   })
-  //fav clicks
+
+
+
   $(".favorites").append(
     '<i class="fa fa-window-close-o favorites__close" aria-hidden="true"></i>'
   )
 
-  $(".favorites").on("click", ".favorites__close", function () {
+  $(".favorites ").on("click", ".favorites__close", function () {
     $(".favorites").fadeOut()
   })
 
@@ -87,12 +93,10 @@ $.getJSON("https://api.punkapi.com/v2/beers", function (data) {
     $(".favorites").fadeIn()
   })
 
-  $("#delete-butt").on("click", function () {
-    console.log("delete")
+  $(".remove Favorite").on("click", function() {
+    console.log("hello");
   })
-// $(favoriteHTML).on("click", ".delete-butt", function () {
-//   console.log("delete")
-// })
+
   //beer pop up
   $(".beer img").on("click", function () {
     $(this)
@@ -128,6 +132,7 @@ $.getJSON("https://api.punkapi.com/v2/beers", function (data) {
   })
 
   $(".tab__item.medium").on("click", function () {
+    console.log("hello")
     $(".beers .medium").show()
 
     $(".beers .weak").hide()
