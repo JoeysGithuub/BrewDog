@@ -1,24 +1,32 @@
 const $ = require("jquery")
-const commentData = require("./CommentFavData")
+// const commentData = require("./CommentFavData")
 const beerData = require("./beerView")
 const beerPrint = require("./beerFavPrint")
-
+const beerFavData = require("./beerFavDatabase")
 
 $(document).on("click", ".addComment", function(event) {
   console.log("updates")
-  var beerWrapper = $(event.target).closest('.beer-wrapper');
-  var beerId = beerWrapper.data('beer-id');
+  const beerWrapper = $(event.target).closest('.beer-wrapper');
+  const beerId = beerWrapper.data('beer-id');
   const commentInput = $('#fav_' + beerId + '_comment').val();
-  const newComment = {
+  const comment = {
       comment: commentInput,
       beerId: beerId
   }
-
-
-  console.log(newComment);
-  commentData.postFavorite(newComment)
-  .then(commentArray => {
-    beerPrint.printComment(commentArray)
+  console.log($('#fav_' + beerId + '_comment'));
+  // debugger
+  beerFavData.postFavorite(comment)
+  .then(comment => {
+    console.log("comment", comment)
+    let thing = `${beerId}favBeerComment`
+    let beerCard = ($(`#${thing}`))
+    console.log("beerCard", beerCard)
+    let jqueryComment = beerPrint.printComment(comment)
+    console.log("fuck")
+    console.log ("jquery Comment", jqueryComment)
+    // jqueryComment.prepend(beerCard)
+    beerCard.prepend(jqueryComment)
+    // beerPrint.printComment(comment).appendTo($(`#${thing}`))
   });
 })
 //.then((favInfo) => {

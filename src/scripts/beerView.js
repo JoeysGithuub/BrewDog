@@ -75,7 +75,7 @@ console.log(data)
     .find(".beer__Id")
     .text()
     let favoriteHTML = `
-            <div class ="favorites__item beer-wrapper" data-beer-id="${favoriteBeerId}" data-index-number = ${index}>
+            <div id= "${favoriteBeerId}favBeerComment" class ="favorites__item beer-wrapper" data-beer-id="${favoriteBeerId}" data-index-number = ${index}>
               <h4 id="fav_${favoriteBeerId}_name" class="favName">${favoriteName}</h4>
               <img id="fav_${favoriteBeerId}_img"  class="favImg" src="${favoriteImg}" />
               <h5  id="fav_${favoriteBeerId}_tagline" class="favTag">${favoriteTagline}</h5>
@@ -121,7 +121,16 @@ console.log(data)
       $(document).on("click", ".removeFavorite", (event) => {
         const beerWrapper = $(event.target).closest('.beer-wrapper');
         const beerId = beerWrapper.data('beer-id');
+        let thing = "beerId"
+        let beerCard = ($(`#${beerId}favBeerComment`))
+        console.log("beerCard", beerCard)
+        console.log("beerId", beerId)
         beersFavoriteData.deleteBeer(beerId)
+        .then(response => {
+          console.log("deleteRun", response)
+          beerCard.remove()
+        })
+
       })
   
 
