@@ -103,8 +103,8 @@ console.log(data)
   })
 
   $(document).on("click", ".fa-star", function (event) {
-      var beerWrapper = $(event.target).closest('.beer-wrapper');
-      var beerId = beerWrapper.data('beer-id');
+      const beerWrapper = $(event.target).closest('.beer-wrapper');
+      const beerId = beerWrapper.data('beer-id');
       const favoriteName = $('#' + beerId + '_name').text();
       const favoriteImg = $('#' + beerId + '_img').attr('src');
       const favoriteTagline = $('#' + beerId + '_tagline').text();
@@ -119,8 +119,8 @@ console.log(data)
  
 
       $(document).on("click", ".removeFavorite", (event) => {
-        var beerWrapper = $(event.target).closest('.beer-wrapper');
-        var beerId = beerWrapper.data('beer-id');
+        const beerWrapper = $(event.target).closest('.beer-wrapper');
+        const beerId = beerWrapper.data('beer-id');
         beersFavoriteData.deleteBeer(beerId)
       })
   
