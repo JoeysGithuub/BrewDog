@@ -1,9 +1,12 @@
 const $ = require("jquery")
-// const beerBuild = require("./beerFavBuild")
-// const beerFav = require("./beerFav")
+const beerBuild = require("./beerFavBuild")
+const beerFav = require("./beerFav")
+const CommentData = require("./CommentFavData")
+const beersFavoriteData = require("./beerFavDatabase")
 
 $.getJSON("http://localhost:3000/beers", function (data) {
 
+console.log(data)
 
   //filter data 
   let weakBeers = data.filter(beer => beer.abv <= 4.5)
@@ -15,14 +18,16 @@ $.getJSON("http://localhost:3000/beers", function (data) {
     let beerHtml = range.map(
       item =>
         `
-        <div class = 'beer-wrapper'>
+        <div data-beer-id="${item.id}" class = "beer-wrapper">
         <div class = "beer ${percent}">
+        <p class = "beer__Id">${item.id}</p>
           <i class="fa fa-star" aria-hidden="true"></i>
-          <h3 class="beer__name">${item.name}</h3>
-          <img class ="beer__img" src = "${item.image_url}">
-          <h4 class ="beer__tagline">${item.tagline}</h4>
+          <h3 id="${item.id}_name" class="beer__name">${item.name}</h3>
+          <img id="${item.id}_img" class ="beer__img" src = "${item.image_url}">
+          <h4 id="${item.id}_tagline" class ="beer__tagline">${item.tagline}</h4>
+
          
-         </div>
+      
          <div class ="pop-up">
           <i class="fa fa-window-close-o" aria-hidden="true"></i>
             <h3 class ="title">Description</h3>
@@ -40,6 +45,7 @@ $.getJSON("http://localhost:3000/beers", function (data) {
        
             `
     );
+    $(".beer__Id").hide()
 
     $(".beers").append(beerHtml)
   }
@@ -63,23 +69,26 @@ $.getJSON("http://localhost:3000/beers", function (data) {
       .closest(".beer-wrapper")
       .find(".beer__tagline")
       .text()
-    let index = $(".fa-star").index(this)
+    let index = $(".fa-star").index(this)   
+    let favoriteBeerId = $(this)
+    .closest(".beer-wrapper")
+    .find(".beer__Id")
+    .text()
     let favoriteHTML = `
-            <div class ="favorites__item" data-index-number = ${index}>
-              <h4>${favoriteName}</h4>
-              <img src = ${favoriteImg} />
-              <h5>${favoriteTagline}</h5>
-              <input class="favComments" placeholder="What Did You Think?"></input>
-              <button type="button" class = "add__Comment">Post</button>
-              <button class ="remove__Favorite">Delete</button>
-              <button type="button" class="update">Edit</button>
+            <div class ="favorites__item beer-wrapper" data-beer-id="${favoriteBeerId}" data-index-number = ${index}>
+              <h4 id="fav_${favoriteBeerId}_name" class="favName">${favoriteName}</h4>
+              <img id="fav_${favoriteBeerId}_img"  class="favImg" src="${favoriteImg}" />
+              <h5  id="fav_${favoriteBeerId}_tagline" class="favTag">${favoriteTagline}</h5>
+              <input class="favBeerId" type="hidden" value = "${favoriteBeerId}"></input>
+              <input id="fav_${favoriteBeerId}_comment"  class="favComments-input" placeholder="What Did You Think?"></input>
+              <button class = "addComment">Post</button>
+              <button class ="removeFavorite">Delete</button>
+              <button class="updateComment">Edit</button>
             </div>
       `;
 
     $(".favorites").append(favoriteHTML)
   })
-
-
 
   $(".favorites").append(
     '<i class="fa fa-window-close-o favorites__close" aria-hidden="true"></i>'
@@ -93,9 +102,28 @@ $.getJSON("http://localhost:3000/beers", function (data) {
     $(".favorites").fadeIn()
   })
 
-  $(".remove Favorite").on("click", function() {
-    console.log("hello");
-  })
+  $(document).on("click", ".fa-star", function (event) {
+      var beerWrapper = $(event.target).closest('.beer-wrapper');
+      var beerId = beerWrapper.data('beer-id');
+      const favoriteName = $('#' + beerId + '_name').text();
+      const favoriteImg = $('#' + beerId + '_img').attr('src');
+      const favoriteTagline = $('#' + beerId + '_tagline').text();
+      const newBeer = {
+        name: favoriteName,
+        image: favoriteImg,
+        tagline: favoriteTagline,
+        id: beerId
+      }
+      beersFavoriteData.postBeer(newBeer)
+    })
+ 
+
+      $(document).on("click", ".removeFavorite", (event) => {
+        var beerWrapper = $(event.target).closest('.beer-wrapper');
+        var beerId = beerWrapper.data('beer-id');
+        beersFavoriteData.deleteBeer(beerId)
+      })
+  
 
   //beer pop up
   $(".beer img").on("click", function () {

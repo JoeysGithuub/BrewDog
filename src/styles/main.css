@@ -100,7 +100,11 @@ img {
   }
 .favorites__title {
   background: purple;
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   padding: 5px;
   color: #fff;
   margin: 0;

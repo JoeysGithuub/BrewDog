@@ -1,25 +1,42 @@
 const $ = require("jquery")
-const beerFavData = require("./beerFavData")
+const commentData = require("./CommentFavData")
 const beerData = require("./beerView")
+const beerPrint = require("./beerFavPrint")
 
-  $(".favorites__item").on("click", ".remove__Favorite", function () {
-    console.log("fuck")
-//     const beerImg = $(".beer__img").val();
-//     const newFavorite = {
-//       favorite: beerImg
-//     }
-//       // userID: userData()
-  
-//     // console.log("thi is the one", userData())
-//     beerFavData.postFavorite(newFavorite)
-//     .then((favInfo) => {
-//       console.log("favInfo",favInfo)
-//       // $("#taskName-input").val("").attr("placeholder", "Task Name")
-//       // $("#taskDetails-input").vale("").attr("placeholder", "Details")
-//       // $("#taskCompletion-input").val("").attr("placeholder", "Expected Completion Date")
-//       // console.log("task date", $("#taskCompletion-input"))
-//       return beerFavData.getAllFavorites()
-//     })
- })
-// //     .then(taskArray => {
-// //       taskPrinter.printTasks(taskArray)
+
+$(document).on("click", ".addComment", function(event) {
+  console.log("updates")
+  var beerWrapper = $(event.target).closest('.beer-wrapper');
+  var beerId = beerWrapper.data('beer-id');
+  const commentInput = $('#fav_' + beerId + '_comment').val();
+  const newComment = {
+      comment: commentInput,
+      beerId: beerId
+  }
+
+
+  console.log(newComment);
+  commentData.postFavorite(newComment)
+  .then(commentArray => {
+    beerPrint.printComment(commentArray)
+  });
+})
+//.then((favInfo) => {
+    // $(".favComments-input").val("").attr("placeholder", "What Did You Think?")
+
+//     return commentData.getAllFavorites()
+// })
+//.then(commentArray => {
+//    beerPrint.printComment(commentArray)
+// })
+//  })
+
+// commentData.postFavorite(commentInput)
+// .then((favInfo) => {
+//     $(".favComments-input").val("").attr("placeholder", "What Did You Think?");
+
+//     return commentData.getAllFavorites()
+// })
+// .then(commentArray => {
+//     beerPrint.printComment(commentArray)
+// })

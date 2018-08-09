@@ -2,31 +2,31 @@ const $ = require("jquery")
 
 const favData = Object.create({}, {
     postFavorite: {
-        value: (newFavorite) => {
+        value: (newComment) => {
             return $.ajax({
-                url: "http://localhost:3000/beers",
+                url: "http://localhost:3000/comments",
                 method: "POST",
-                data: newFavorite
+                data: newComment
             })
         }
     },
     getAllFavorites: {
         value: () => {
-            return $.ajax("http://localhost:3000/beers")
+            return $.ajax("http://localhost:3000/comments")
         }
     },
     getFavorite: {
         value: (id) => {
             return $.ajax({
-                url: `http://localhost:3000/beers${id}`,
+                url: `http://localhost:3000/comments${id}`,
                 method: "GET"
             })
         }
     },
     putFavorite: {
-        value: (updateFavorites) => {
+        value: (updateComments) => {
             return $.ajax({
-                url: `http://localhost:3000/beers${updateFavorites.id}`,
+                url: `http://localhost:3000/comments${updateComments.id}`,
                 method: "PUT",
                 data: {
                 }
@@ -36,11 +36,11 @@ const favData = Object.create({}, {
     deleteFavorite: {
         value: (id) => {
             return $.ajax({
-                url: `http://localhost:3000/beers${id}`,
+                url: `http://localhost:3000/comments${id}`,
                 method: "DELETE",
             })
         }
     }
-})
+}) 
 
 module.exports = favData
