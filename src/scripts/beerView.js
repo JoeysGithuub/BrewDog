@@ -87,6 +87,7 @@ console.log(data)
             </div>
       `;
 
+      
     $(".favorites").append(favoriteHTML)
   })
 
@@ -133,6 +134,20 @@ console.log(data)
 
       })
   
+    $(document).on("click", ".updateComment", (event) => {
+      console.log("hello")
+      console.log("event", event)
+      const favUpdate = event.target.parentElement.children[0].id
+      console.log("fav", favUpdate)
+      const beerInput = $(".favComments-input").val()
+      console.log(beerInput)
+      const stuff = $("#" + favUpdate)
+      console.log(stuff)
+      stuff.empty()
+      stuff.append()
+      $("<p>").text(beerInput).appendTo(stuff)
+      beersFavoriteData.patchFavorite(beerInput, favUpdate)
+    })
 
   //beer pop up
   $(".beer img").on("click", function () {

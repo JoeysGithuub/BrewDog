@@ -62,12 +62,13 @@ const favBeers = Object.create({}, {
             })
         }
     },
-    putFavorite: {
-        value: (updateComments) => {
+    patchFavorite: {
+        value: (comment, id) => {
             return $.ajax({
-                url: `http://localhost:3000/comments${updateComments.id}`,
-                method: "PUT",
+                url: `http://localhost:3000/comments/${id}`,
+                method: "PATCH",
                 data: {
+                    comment: comment
                 }
             })
         }
