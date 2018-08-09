@@ -3289,6 +3289,18 @@
       "userName": "jfdj",
       "password": "jfdk",
       "id": 3
+    },
+    {
+      "name": "joey",
+      "userName": "djfdaj",
+      "password": "jfdkf",
+      "id": 4
+    },
+    {
+      "name": "jisie",
+      "userName": "jisie",
+      "password": "test",
+      "id": 5
     }
   ],
   "favorites": [
@@ -3299,34 +3311,10 @@
       "id": "18"
     },
     {
-      "name": "Electric India",
-      "image": "https://images.punkapi.com/v2/6.png",
-      "tagline": "Vibrant Hoppy Saison.",
-      "id": "6"
-    },
-    {
-      "name": "AB:12",
-      "image": "https://images.punkapi.com/v2/7.png",
-      "tagline": "Imperial Black Belgian Ale.",
-      "id": "7"
-    },
-    {
-      "name": "Bramling X",
-      "image": "https://images.punkapi.com/v2/10.png",
-      "tagline": "Single Hop IPA Series - 2011.",
-      "id": "10"
-    },
-    {
       "name": "Pilsen Lager",
       "image": "https://images.punkapi.com/v2/4.png",
       "tagline": "Unleash the Yeast Series.",
       "id": "4"
-    },
-    {
-      "name": "Avery Brown Dredge",
-      "image": "https://images.punkapi.com/v2/5.png",
-      "tagline": "Bloggers' Imperial Pilsner.",
-      "id": "5"
     }
   ],
   "comments": [
@@ -3909,6 +3897,56 @@
       "comment": "shit",
       "beerId": "5",
       "id": 116
+    },
+    {
+      "comment": "pretty sgutty",
+      "beerId": "5",
+      "id": 117
+    },
+    {
+      "comment": "pretty sgutty",
+      "beerId": "4",
+      "id": 118
+    },
+    {
+      "comment": "crap",
+      "beerId": "10",
+      "id": 119
+    },
+    {
+      "comment": "bad",
+      "beerId": "11",
+      "id": 120
+    },
+    {
+      "comment": "dsfsdsdfdsdsfd",
+      "beerId": "6",
+      "id": 121
+    },
+    {
+      "comment": "dsfsdsdfdsdsfdassad",
+      "beerId": "6",
+      "id": 122
+    },
+    {
+      "comment": "dssd",
+      "beerId": "17",
+      "id": 123
+    },
+    {
+      "comment": "like",
+      "beerId": "10",
+      "id": 124
+    },
+    {
+      "comment": "comment",
+      "beerId": "17",
+      "id": 125
+    },
+    {
+      "comment": "edited comment",
+      "beerId": "17",
+      "id": 126
     }
   ]
 }

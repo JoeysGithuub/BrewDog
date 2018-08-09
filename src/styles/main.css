@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(102, 53, 13)
+  background-color: teal;  
 }
 body {
   font-size: 14px;
@@ -15,7 +15,7 @@ img {
   grid-gap: 18px;
 }
   .beer {
-    background-color:rgb(102, 53, 13);
+    background-color:teal   ;
     padding: 15px;
     text-align: center;
     cursor: pointer;
@@ -44,7 +44,7 @@ img {
   margin-bottom: 18px;
 }
 .tab__item {
-  background: rgb(102, 53, 13);
+  background: teal;
   cursor: pointer;
   color: purple;
 }
