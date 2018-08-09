@@ -3293,107 +3293,125 @@
   ],
   "favorites": [
     {
-      "id": "fN6B3Zr"
+      "name": "Fake Lager",
+      "image": "https://images.punkapi.com/v2/8.png",
+      "tagline": "Bohemian Pilsner.",
+      "id": "8"
     },
     {
-      "id": "B_vvaoz"
+      "name": "Pilsen Lager",
+      "image": "https://images.punkapi.com/v2/4.png",
+      "tagline": "Unleash the Yeast Series.",
+      "id": "4"
     },
     {
-      "id": "E70Hy7f"
+      "name": "Libertine Porter",
+      "image": "https://images.punkapi.com/v2/16.png",
+      "tagline": "Dry-Hopped Aggressive Porter.",
+      "id": "16"
     },
     {
-      "id": "~6nr58w"
+      "name": "Arcade Nation",
+      "image": "https://images.punkapi.com/v2/12.png",
+      "tagline": "Seasonal Black IPA.",
+      "id": "12"
     },
     {
-      "id": "LCm4fI5"
+      "name": "Bad Pixie",
+      "image": "https://images.punkapi.com/v2/25.png",
+      "tagline": "Spiced Wheat Beer.",
+      "id": "25"
     },
     {
-      "id": "rUJ33fS"
+      "name": "Russian Doll – India Pale Ale",
+      "image": "https://images.punkapi.com/v2/18.png",
+      "tagline": "Nesting Hop Bomb.",
+      "id": "18"
     },
     {
-      "id": "K3n~XfB"
+      "name": "Electric India",
+      "image": "https://images.punkapi.com/v2/6.png",
+      "tagline": "Vibrant Hoppy Saison.",
+      "id": "6"
+    },
+    {
+      "name": "Misspent Youth",
+      "image": "https://images.punkapi.com/v2/keg.png",
+      "tagline": "Milk & Honey Scotch Ale.",
+      "id": "11"
+    },
+    {
+      "name": "Avery Brown Dredge",
+      "image": "https://images.punkapi.com/v2/5.png",
+      "tagline": "Bloggers' Imperial Pilsner.",
+      "id": "5"
     }
   ],
   "comments": [
     {
-      "comment": "better",
-      "beerId": "5",
-      "id": "B1rSuXM"
-    },
-    {
-      "comment": "joey",
-      "beerId": "5",
-      "id": "mqV9IQz"
-    },
-    {
-      "comment": "",
-      "beerId": "5",
-      "id": "XuXQXPV"
-    },
-    {
-      "comment": "gooder",
-      "beerId": "10",
-      "id": "fT2hftH"
-    },
-    {
-      "comment": "",
-      "beerId": "7",
-      "id": "bqSrz5_"
-    },
-    {
-      "comment": "pretty good",
-      "beerId": "5",
-      "id": "C1_ThKO"
-    },
-    {
-      "comment": "preety",
-      "beerId": "5",
-      "id": "wKX4I~B"
-    },
-    {
-      "comment": "",
-      "beerId": "5",
-      "id": "jWV4TwS"
-    },
-    {
-      "comment": "dl",
-      "beerId": "5",
-      "id": "lKOsygW"
-    },
-    {
-      "comment": "this sucks",
-      "beerId": "5",
-      "id": "8oIgB4l"
-    },
-    {
-      "comment": "fjfj",
-      "beerId": "5",
-      "id": "hZy0PC7"
-    },
-    {
-      "comment": "jj",
-      "beerId": "2",
-      "id": "nU355tc"
-    },
-    {
-      "comment": "ksm",
-      "beerId": "5",
-      "id": "3caU0ID"
-    },
-    {
-      "comment": "s",
-      "beerId": "5",
-      "id": "OkD4ydZ"
-    },
-    {
-      "comment": "kdjd",
-      "beerId": "5",
-      "id": "1R0GfKq"
-    },
-    {
-      "comment": "hh",
+      "comment": "fdjk",
       "beerId": "6",
-      "id": "daTvtmw"
+      "id": 1
+    },
+    {
+      "comment": "not bad",
+      "beerId": "11",
+      "id": 2
+    },
+    {
+      "comment": "decent",
+      "beerId": "10",
+      "id": 3
+    },
+    {
+      "comment": "shit",
+      "beerId": "8",
+      "id": 4
+    },
+    {
+      "comment": "shit",
+      "beerId": "4",
+      "id": 5
+    },
+    {
+      "comment": "kxjc",
+      "beerId": "5",
+      "id": 6
+    },
+    {
+      "comment": "mp fjdj",
+      "beerId": "4",
+      "id": 7
+    },
+    {
+      "comment": "ksd",
+      "beerId": "5",
+      "id": 8
+    },
+    {
+      "comment": "k ",
+      "beerId": "6",
+      "id": 9
+    },
+    {
+      "comment": "dkjf",
+      "beerId": "5",
+      "id": 10
+    },
+    {
+      "comment": "good",
+      "beerId": "5",
+      "id": 11
+    },
+    {
+      "comment": "jkj",
+      "beerId": "6",
+      "id": 12
+    },
+    {
+      "comment": "dns",
+      "beerId": "5",
+      "id": 13
     }
   ]
 }

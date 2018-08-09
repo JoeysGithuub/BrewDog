@@ -1,18 +1,45 @@
 const $ = require("jquery")
 
-const favBeer = Object.create({}, {
+const favBeers = Object.create({}, {
     postBeer: {
-        value: (newBeers) => {
+        value: (newBeer) => {
             return $.ajax({
                 url: "http://localhost:3000/favorites",
                 method: "POST",
-                data: {
-                    // name: favoriteName,
-                    // image: favoriteImg,
-                    // tagline: favoriteTagline,
-                    // id: favId
-                }
+                data: newBeer
+            })
+        }
+    },
+    getAllBeers: {
+        value: () => {
+            return $.ajax("http://localhost:3000/favorites")
+        }
+    },
+    getBeer: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/favorites${id}`,
+                method: "GET"
+            })
+        }
+    },
+    putBeer: {
+        value: (updateFavorites) => {
+            return $.ajax({
+                url: `http://localhost:3000/favorites${updateFavorites.id}`,
+                method: "PUT",
+                data: updateFavorites
+            })
+        }
+    },
+    deleteBeer: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/favorites/${id}`,
+                method: "DELETE",
             })
         }
     }
-})
+}) 
+
+module.exports = favBeers

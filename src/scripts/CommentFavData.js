@@ -44,4 +44,3 @@ const favData = Object.create({}, {
 }) 
 
 module.exports = favData
-// module.exports = favBeer
