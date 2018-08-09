@@ -39,7 +39,49 @@ const favBeers = Object.create({}, {
                 method: "DELETE",
             })
         }
+    },
+    postFavorite: {
+        value: (newComment) => {
+            return $.ajax({
+                url: "http://localhost:3000/comments",
+                method: "POST",
+                data: newComment
+            })
+        }
+    },
+    getAllFavorites: {
+        value: () => {
+            return $.ajax("http://localhost:3000/comments")
+        }
+    },
+    getFavorite: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/comments${id}`,
+                method: "GET"
+            })
+        }
+    },
+    patchFavorite: {
+        value: (comment, id) => {
+            return $.ajax({
+                url: `http://localhost:3000/comments/${id}`,
+                method: "PATCH",
+                data: {
+                    comment: comment
+                }
+            })
+        }
+    },
+    deleteFavorite: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/comments${id}`,
+                method: "DELETE",
+            })
+        }
     }
-}) 
+})
+
 
 module.exports = favBeers

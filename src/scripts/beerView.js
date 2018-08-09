@@ -75,7 +75,7 @@ console.log(data)
     .find(".beer__Id")
     .text()
     let favoriteHTML = `
-            <div class ="favorites__item beer-wrapper" data-beer-id="${favoriteBeerId}" data-index-number = ${index}>
+            <div id= "${favoriteBeerId}favBeerComment" class ="favorites__item beer-wrapper" data-beer-id="${favoriteBeerId}" data-index-number = ${index}>
               <h4 id="fav_${favoriteBeerId}_name" class="favName">${favoriteName}</h4>
               <img id="fav_${favoriteBeerId}_img"  class="favImg" src="${favoriteImg}" />
               <h5  id="fav_${favoriteBeerId}_tagline" class="favTag">${favoriteTagline}</h5>
@@ -87,6 +87,7 @@ console.log(data)
             </div>
       `;
 
+      
     $(".favorites").append(favoriteHTML)
   })
 
@@ -121,9 +122,32 @@ console.log(data)
       $(document).on("click", ".removeFavorite", (event) => {
         const beerWrapper = $(event.target).closest('.beer-wrapper');
         const beerId = beerWrapper.data('beer-id');
+        let thing = "beerId"
+        let beerCard = ($(`#${beerId}favBeerComment`))
+        console.log("beerCard", beerCard)
+        console.log("beerId", beerId)
         beersFavoriteData.deleteBeer(beerId)
+        .then(response => {
+          console.log("deleteRun", response)
+          beerCard.remove()
+        })
+
       })
   
+    $(document).on("click", ".updateComment", (event) => {
+      console.log("hello")
+      console.log("event", event)
+      const favUpdate = event.target.parentElement.children[0].id
+      console.log("fav", favUpdate)
+      const beerInput = $(".favComments-input").val()
+      console.log(beerInput)
+      const stuff = $("#" + favUpdate)
+      console.log(stuff)
+      stuff.empty()
+      stuff.append()
+      $("<p>").text(beerInput).appendTo(stuff)
+      beersFavoriteData.patchFavorite(beerInput, favUpdate)
+    })
 
   //beer pop up
   $(".beer img").on("click", function () {
