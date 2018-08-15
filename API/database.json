@@ -3301,6 +3301,27 @@
       "userName": "jisie",
       "password": "test",
       "id": 5
+    },
+    {
+      "name": "fkjek",
+      "userName": "jfkje",
+      "password": "fjfjjf",
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
     }
   ],
   "favorites": [
@@ -3311,10 +3332,10 @@
       "id": "18"
     },
     {
-      "name": "Pilsen Lager",
-      "image": "https://images.punkapi.com/v2/4.png",
-      "tagline": "Unleash the Yeast Series.",
-      "id": "4"
+      "name": "Avery Brown Dredge",
+      "image": "https://images.punkapi.com/v2/5.png",
+      "tagline": "Bloggers' Imperial Pilsner.",
+      "id": "5"
     }
   ],
   "comments": [
@@ -3947,6 +3968,51 @@
       "comment": "edited comment",
       "beerId": "17",
       "id": 126
+    },
+    {
+      "comment": "pretty good",
+      "beerId": "2",
+      "id": 127
+    },
+    {
+      "comment": "terrible",
+      "beerId": "1",
+      "id": 128
+    },
+    {
+      "comment": "good ",
+      "beerId": "5",
+      "id": 129
+    },
+    {
+      "comment": "bad",
+      "beerId": "4",
+      "id": 130
+    },
+    {
+      "comment": "good",
+      "beerId": "2",
+      "id": 131
+    },
+    {
+      "comment": "djf",
+      "beerId": "7",
+      "id": 132
+    },
+    {
+      "comment": "Really good beer",
+      "beerId": "4",
+      "id": 133
+    },
+    {
+      "comment": "not bad",
+      "beerId": "25",
+      "id": 134
+    },
+    {
+      "comment": "ksjc",
+      "beerId": "5",
+      "id": 135
     }
   ]
 }

@@ -20,12 +20,11 @@ console.log(data)
         `
         <div data-beer-id="${item.id}" class = "beer-wrapper">
         <div class = "beer ${percent}">
-        <p class = "beer__Id">${item.id}</p>
+        <p style="display:none" class = "beer__Id">${item.id}</p>
           <i class="fa fa-star" aria-hidden="true"></i>
           <h3 id="${item.id}_name" class="beer__name">${item.name}</h3>
           <img id="${item.id}_img" class ="beer__img" src = "${item.image_url}">
           <h4 id="${item.id}_tagline" class ="beer__tagline">${item.tagline}</h4>
-
          
       
          <div class ="pop-up">
@@ -38,7 +37,6 @@ console.log(data)
                ${item.food_pairing
           .map(ingredient => `<li>${ingredient}</li>`)
           .join("")}
-
               </ul>
           </div>
         </div>

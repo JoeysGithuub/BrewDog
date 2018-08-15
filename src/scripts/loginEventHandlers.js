@@ -4,7 +4,7 @@ const loginData = require("./loginHandler")
 let userID = ""
 
 // $("#signBox").on("click", "#but_reg", () => {
-    $("#but_reg").click(function() {
+    $("#signup_btn").click(function() {
         console.log("hell")
     const nameInput = $("#name-input").val()
     const userNameInput = $("#userName-input").val()
