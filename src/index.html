@@ -9,45 +9,143 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css">
     <title>BrewDog</title>
+</head>
     <body>
-        <table>
-            <tr>
-             <!-- <td>Name : </td> -->
-             <td><input type='text' id='name-input' placeholder="Name" ></td>
-            </tr>
-            <tr>
-             <!-- <td>Username : </td> -->
-             <td><input type='text' id='userName-input' placeholder="Username" ></td>
-            </tr>
-            <tr>
-             <!-- <td>Password : </td> -->
-             <td><input type='password' id='password-input' placeholder="Password" >&nbsp;
-                <input type='checkbox' id='toggle' value='0' onchange='togglePassword(this);'>&nbsp; <span id='toggleText'>Show</span></td>
-            </tr>
-            <tr>
-             <!-- <td>&nbsp;</td> -->
-             <td><input type='button' id='but_reg' value='Join Now!' ></td>
-            </tr>
-           </table>
-           <div class='container'>
-              <h1>BrewDog</h1>
-              <div class='tabs'>
-                <div class='tab__item weak '>
-                  <h3>0% - 4.5%</h3>
+           <nav>
+            <ul>
+              <li data-target="#page1">Home</li>
+              <li data-target="#page2">Contact Us</li>
+              <li data-target="#page3">About</li>
+              <li data-target="#page4">Login</a></li>
+            </ul>
+          </nav>
+            <div class="content">
+            
+              <div data-type="page" id="page1"><!-- page 1 -->
+              <!-- <h1>My first page with style</h1> -->
+              <div class='container'>
+                <!-- <h1>BrewDog</h1> -->
+                <div class='tabs'>
+                  <div class='tab__item weak '>
+                    <h3>0% - 4.5%</h3>
+                  </div>
+                  <div class='tab__item medium active'>
+                    <h3>4.6% - 7.5%</h3>
+                  </div>
+                  <div class='tab__item strong'>
+                    <h3>7.6% - 99%</h3>
+                  </div>
                 </div>
-                <div class='tab__item medium active'>
-                  <h3>4.6% - 7.5%</h3>
-                </div>
-                <div class='tab__item strong'>
-                  <h3>7.6% - 99%</h3>
-                </div>
+                <h4 class='favorites__title'>Favorites</h4>
+                <div class='favorites'></div>
+                <div class='beers'></div>
               </div>
-              <h4 class='favorites__title'>Favorites</h4>
-              <div class='favorites'></div>
-              <div class='beers'></div>
+              <div class='bg'></div>
+              
+            
+              </div><!-- /page1 -->
+              
+              <div data-type="page" id="page2"><!-- page 2 -->
+                <div id="contact-form">
+                    <div> 
+                      <h4>Have a question or just want to get in touch? Let's chat.</h4> 
+                    </div>
+                      <p id="failure">Oopsie...message not sent.</p>  
+                      <p id="success">Your message was sent successfully. Thank you!</p>
+                  
+                         <form id="formIn" method="post" action="">
+                        <div>
+                            <label for="name">
+                              <span class="required">Name: *</span> 
+                              <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
+                            </label> 
+                        </div>
+                        <div>
+                            <label for="email">
+                              <span class="required">Email: *</span>
+                              <input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
+                            </label>  
+                        </div>
+                        <div>		          
+                            <label for="subject">
+                            <span>Subject: </span>
+                              <select id="subject" name="subject" tabindex="4">   
+                                 <option value="hello">Product Price Question</option>
+                                 <option value="quote">Technical Support</option>  
+                                 <option value="general">Just Want to Chat?</option>
+                              </select>
+                            </label>
+                        </div>
+                        <div>		          
+                            <label for="message">
+                              <span class="required">Message: *</span> 
+                              <textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea> 
+                            </label>  
+                        </div>
+                        <div>		           
+                            <input name="submit" type="submit" id="submit" ></input> 
+                        </div>
+                         </form>
+                  
+                    </div>
+  
+           </div>
+            
+
+             <div data-type="page" id="page3">
+              <div class="center-content">
+  
+                <div id="welcome-msg">
+                  <h1>Our Story</h1>
+                </div>
+                
+                
+                <div id="other-msg">
+                  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin massa mi, scelerisque vitae scelerisque id, vehicula eget elit. Etiam blandit arcu nulla, et sagittis sapien pulvinar vel. Sed nec elit nec leo tristique convallis non sed lorem. Proin semper imperdiet facilisis. Phasellus consequat et lectus ut sollicitudin. Sed nisi augue, dictum nec eros sed, elementum dignissim justo. Phasellus aliquam est ut ipsum iaculis mattis. Vivamus urna risus, dapibus ac ornare eu, tincidunt id mi. Aenean sit amet dapibus augue. Cras in libero eget dolor congue gravida. Vestibulum mattis orci at sapien elementum posuere. Nulla sit amet feugiat mauris. Quisque non viverra massa, ut molestie est.
+                  </h2>
+                </div>
+              
+              <div id="another-msg">
+                <h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin massa mi, scelerisque vitae scelerisque id, vehicula eget elit. Etiam blandit arcu nulla, et sagittis sapien pulvinar vel. Sed nec elit nec leo tristique convallis non sed lorem. Proin semper imperdiet facilisis. Phasellus consequat et lectus ut sollicitudin.
+                </h2>
+              </div>
+                
+              </div>
+
+              </div><!-- /page3 -->
+          
+            <div data-type="page" id="page4">
+                <div id="box">
+                    <div id="main"></div>
+                    
+                    <div id="loginform">
+                      
+                        <input id="em" type="email" placeholder="Email"/><br>
+                        <input id="pa" type="password" placeholder="Password"/><br>
+                        <button id="secLog">LOGIN</button>
+                    </div>
+                    
+                    <div id="signupform">
+                       
+                        <input id="nam" type="text" placeholder="Full Name"/><br>
+                        <input id="ema" type="email" placeholder="Email"/><br>
+                        <input id="pass" type="password" placeholder="Password"/><br>
+                        <button id="secSign">SIGN UP</button>
+                    </div>
+                    
+                    <div id="login_msg">Have an account?</div>
+                    <div id="signup_msg">Don't have an account?</div>
+                    
+                    <button id="login_btn">LOGIN</button>
+                    <button id="signup_btn">SIGN UP</button>
+                    
+                    
+                </div>
             </div>
-            <div class='bg'></div>
+            </div><!-- /content -->
     <script src="bundle.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://use.fontawesome.com/fa994a00c6.js"></script>
 </body>
 </html>

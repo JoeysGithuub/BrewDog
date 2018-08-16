@@ -1,22 +1,22 @@
-const $ = require("jquery")
+// const $ = require("jquery")
 
-$(document).ready(function(){
-    $("#toggle").change(function(){
+// $(document).ready(function(){
+//     $("#toggle").change(function(){
      
-     // Check the checkbox state
-     if($(this).is(':checked')){
-      // Changing type attribute
-      $("#password-input").attr("type","text");
+//      // Check the checkbox state
+//      if($(this).is(':checked')){
+//       // Changing type attribute
+//       $("#password-input").attr("type","text");
       
-      // Change the Text
-      $("#toggleText").text("Hide");
-     }else{
-      // Changing type attribute
-      $("#password-input").attr("type","password");
+//       // Change the Text
+//       $("#toggleText").text("Hide");
+//      }else{
+//       // Changing type attribute
+//       $("#password-input").attr("type","password");
      
-      // Change the Text
-      $("#toggleText").text("Show");
-     }
+//       // Change the Text
+//       $("#toggleText").text("Show");
+//      }
     
-    });
-   });
+//     });
+//    });

@@ -2,6 +2,8 @@
   background-color: teal;  
 }
 body {
+  padding: 0;
+  margin: 0;
   font-size: 14px;
   line-height: 1.462;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -9,6 +11,76 @@ body {
 img {
   max-width: 100%;
 }
+nav ul {
+	list-style-type: none;
+  padding: 1em;
+  margin: 0;
+  width: 8em;
+  float: left;
+	border-right: 1px dotted grey;
+	height: 20em;
+	margin-top: 2em;
+}
+
+nav ul li {
+  margin: 0.5em 0;
+  padding: 0.3em;
+  background: black;
+  color: white;
+  text-align:right;
+}
+
+nav li a { text-decoration: none; }
+nav li a:link {color:white;}      /* unvisited link */
+nav li a:visited {color:white;}  /* visited link */
+nav li a:hover {color:#FF0000;}  /* mouse over link */
+nav li a:active {color:#0000FF;}  /* selected link */
+
+nav li.current {
+	width: 16em;
+	text-align:left;
+}
+
+nav li.current a {
+	margin-left: 9em;
+	font-weight: bold;
+}
+
+div.content {
+	float: left;
+	margin: 0;
+	padding: 0;
+	margin-left: 9em;
+	margin-top: 1.8em;
+  max-width: 70%;
+}
+
+div.content div {
+  padding: 20px;
+}
+
+    nav ul {
+      clear: both; /* clear space around (left and right side), this pushes other elements downward */
+      padding: 0.5em;
+      margin: 0;
+      height: 10em;
+    }
+    div.content a {
+      font-size:150%;
+      padding: 0.5em;
+    }
+    h1 {
+      margin-top:0;
+    }
+    nav li a:hover {color:white;}  /* mouse over link */
+    div.content {
+      margin: 0;
+      padding: 0;
+      clear: both;
+    }
+
+    /* main */
+
 .beers {
   display: grid;
   grid-template-columns: 32% 32% 32%;
@@ -33,11 +105,11 @@ img {
   color: greenyellow;
 }
 .tabs {
-  /* display: grid;
+  display: grid;
   grid-template-columns: 32% 32% 32%;
-  grid-gap: 2%; */
-  display: flex;
-  flex-direction: column;
+  grid-gap: 2%;
+  /* display: flex;
+  flex-direction: column; */
   justify-content: center;
   text-align: center;
   padding: 2%;
@@ -54,13 +126,13 @@ img {
   position: relative;
 }
 .active {
-  background: purple;
+  background: teal;
   color: #fff;
 }
 .pop-up {
   display: none;
   position: absolute;
-  background: purple;
+  /* background:  */
   color: #fff;
   font-size: 16px;
   transform: translate(-50%, -50%);
@@ -134,7 +206,7 @@ h1 {
   text-align: left;
   transform-origin: bottom; 
   margin-top: 280px;
-  transform: rotate(270deg);
+  /* transform: rotate(270deg); */
 }
 
 #name-input {
@@ -164,4 +236,239 @@ h1 {
 .fav {
   height: 20px;
   width: 30px;
+}
+
+/* Contact Form Styles */
+h1 {
+  margin: 10px 0 0 0;
+}
+h4{
+  margin: 0 0 20px 0;
+}
+#contact-form {
+  background-color:rgba(72,72,72,0.7);
+  padding: 10px 20px 30px 20px;
+  max-width:100%;
+  float: left;
+  left: 50%;
+  position: absolute;
+  margin-top:30px;
+  margin-left: -260px;
+  border-radius:7px;
+  -webkit-border-radius:7px;
+  -moz-border-radius:7px;
+}
+#contact-form input,   
+#contact-form select,   
+#contact-form textarea,   
+#contact-form label { 
+  font-size: 15px;  
+  margin-bottom: 2px;
+  font-family: Arial, san-serif;
+} 
+#contact-form input,   
+#contact-form select,   
+#contact-form textarea { 
+  width:100%;
+  background: #fff;
+  border: 0; 
+  -moz-border-radius: 4px;  
+  -webkit-border-radius: 4px;  
+  border-radius: 4px;
+  margin-bottom: 25px;  
+  padding: 5px;  
+}  
+#contact-form input:focus,   
+#contact-form select:focus,   
+#contact-form textarea:focus {  
+  background-color: #E5E6E7; 
+}  
+#contact-form textarea {
+  width:100%;
+  height: 150px;
+}
+#contact-form button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background:#991D57;
+  background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  color:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+#contact-form button[type="submit"]:hover {
+  background-image:linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+  background-image:-moz-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+  background-image:-webkit-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+  -webkit-transition:background 0.3s ease-in-out;
+  -moz-transition:background 0.3s ease-in-out;
+  transition:background-color 0.3s ease-in-out;
+}
+#contact-form button[type="submit"]:active {
+  box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+input:required, textarea:required {  
+  box-shadow: none;
+  -moz-box-shadow: none;  
+  -webkit-box-shadow: none;  
+  -o-box-shadow: none;  
+} 
+#contact-form .required {  
+  font-weight:bold;  
+  color: #E5E6E7;      
+}
+
+/* Hide success/failure message
+  (especially since the php is missing) */
+#failure, #success {
+  color: #6EA070; 
+  display:none;  
+}
+
+/* Make form look nice on smaller screens */
+@media only screen and (max-width: 580px) {
+  #contact-form{
+     left: 3%;
+     margin-right: 3%;
+     width: 88%;
+     margin-left: 0;
+     padding-left: 3%;
+     padding-right: 3%;
+  }
+}
+
+/* Login Style */
+
+#box{
+    height: 200px;
+    width: 1000px;
+    background-color:#2D2D2D;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#main{
+    height: 400px;
+    width: 450px;
+    background-color:white;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+}
+#loginform,#signupform{
+    position: absolute;
+    top:50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+#signupform{
+    top:45%;
+    left: 75%;
+    visibility: hidden;
+}
+#loginform h1,#signupform h1{
+    font-family: arial;
+    font-size: 25px;
+    color:turquoise;
+}
+#loginform input,#signupform input{
+    height: 40px;
+    width: 300px;
+    border: 0px;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 5px;
+}
+#loginform button,#signupform button{
+    height: 35px;
+    width: 130px;
+    background-color:turquoise;
+    font-family: monospace;
+    font-size: 16px;
+    color:white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 175px;
+}
+#login_btn,#signup_btn{
+    height: 35px;
+    width: 120px;
+    background-color:transparent;
+    color:white;
+    border:1px solid white;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    left: 75%;
+    top:65%;
+    transform: translate(-50%,-50%);
+    transition: all .5s;
+}
+#signup_btn{
+    left: 25%;
+}
+#login_btn:hover,#signup_btn:hover{
+    background-color:white;
+    color:#2d2d2d;
+    cursor: pointer;
+}
+#login_msg,#signup_msg{
+    font-family: arial;
+    font-size: 25px;
+    color:white;
+    position: absolute;
+    top:35%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+#signup_msg{
+    left: 25%;
+}
+
+[data-type] {
+  display: none;
+}
+
+/* about */
+
+.center-content {
+  max-width: 70%;
+  margin: auto;
+  background-color: white;
+  text-align: left;
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #dadfe8;
+}
+#welcome-msg {
+  padding-top: 5em;
+  text-align: center;
+}
+
+#other-msg {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  max-width: 80%;
+  margin: auto;
+}
+#another-msg {
+  padding-bottom: 3em;
+  max-width: 80%;
+  margin: auto;
+}
+header h2 {
+  display: inline;
+  padding-left: 12.5%;
 }
