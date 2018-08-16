@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$(this).addClass("current"); // Add "current" class to selected page
 		
 		$("[data-type]").hide(); // Hide all content
-
+	
     // Find the href attribute value to identify the active page+content:
 		var targetId = $(this).data("target"); 
 		$(targetId).show(); // Fade in the active page content
