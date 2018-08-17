@@ -40,8 +40,8 @@ loginData.postUser(newUser)
         // console.log(userInfo)
         $("#logIn-input").val("").attr("placeholder", "Username")
         return loginData.getAllUsers()
-
 })
+document.querySelector('[data-target]').click();
 })
 
 
